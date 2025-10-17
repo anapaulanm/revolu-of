@@ -1,0 +1,21 @@
+/*varíaveis*/
+:root{
+    --green:#332134
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+background: rgb(255, 184, 90);
+color: rgb(255, 255, 255);
+
+}
+
+.navbar ul{
+    display: flex;
+    gap: 4px;
+    list-style: none;
+}
