@@ -1,34 +1,35 @@
-name:🃏 deploy & Quality
+name: 🦙 Deploy & Quality Assurance
 
 on:
- push:
- - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
-contents: read
-pages: write
-id-token: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
- group: ${{ github.workflow }}-${{ github.ref }}
- cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
- deploy:
-  name: (rocket) deploy to Github to Github pages
-  runs-on: ubuntu-latest
-  if: github.ref == 'refs/heads/main'
-  outputs:
-   page_url: ${{ steps.deployment.outputs.pages }}
+  deploy:
+    name: 🚀 Deploy to Github pages
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
 
-  enviromment:
-   name: github-pages
-   url: ${{ steps.deployment.outputs.pages }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: 📥 Checkout code
+      - name: 🔽 Checkout code
         uses: actions/checkout@v4
-
       - name: 📄 Setup Pages
         uses: actions/configure-pages@v4
 
