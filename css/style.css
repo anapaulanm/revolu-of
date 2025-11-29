@@ -74,3 +74,75 @@ footer {
     font-size: 14px;
     border-top: 2px solid #f5c27a; /* laranja clarinho */
 }
+/* CONTAINER DO FORM */
+.contato-container {
+    width: 90%;
+    max-width: 600px;
+    background: #fff4d1; /* amarelo bem claro */
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(180, 120, 40, 0.2);
+}
+
+/* TÍTULO */
+.contato-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #c67100; /* laranja queimado suave */
+}
+
+/* CAMPOS */
+.formulario-campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.formulario-campo label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #a06300;
+}
+
+.formulario-campo input,
+.formulario-campo select,
+.formulario-campo textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #dcb676;
+    background: #fff9e8;
+    font-size: 15px;
+}
+
+textarea {
+    height: 120px;
+}
+
+/* BOTÃO */
+#enviar-btn {
+    width: 100%;
+    padding: 14px;
+    background: #f2a742;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#enviar-btn:hover {
+    background: #da8d28;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    background: #ffecd1;
+    padding: 15px 0;
+    text-align: center;
+    color: #5a3a00;
+    font-size: 14px;
+    border-top: 2px solid #f5c27a;
+}
